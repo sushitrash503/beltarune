@@ -1,0 +1,113 @@
+/* Estilos comunes para ambos tamaños de pantalla */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-color: #006d77;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.beltarune {
+    color: #83c5be;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: "Jaro", sans-serif;
+}
+
+.beltarune-img {
+    width: 500px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }   
+}
+
+.block-1 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.bebida {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.beltarune-h1 {
+    font-family: "Jaro", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #012a4a;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Estilos específicos para pantallas de 768px o más */
+@media (min-width: 768px) {
+    .lista-items {
+        display: flex;
+        padding: 0;
+        list-style-type: none;
+        margin-right: 15px;
+    }
+
+    .items-menu {
+        margin-left: 25px;
+    }
+
+    .items-menu a {
+        text-decoration: none;
+        color: #83c5be;
+        font-size: 20px;
+        font-family: "Jaro", sans-serif;
+        margin-right: 15px;
+    }
+
+    .items-menu a:hover {
+        color: #012a4a;
+        transition: color 0.5s ease;
+    }
+
+    .block-1 {
+        display: flex;
+        background: rgb(255,93,143);
+        background: -moz-linear-gradient(90deg, rgba(255,93,143,1) 15%, rgba(6,155,217,1) 73%);
+        background: -webkit-linear-gradient(90deg, rgba(255,93,143,1) 15%, rgba(6,155,217,1) 73%);
+        background: linear-gradient(90deg, rgba(255,93,143,1) 15%, rgba(6,155,217,1) 73%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5d8f",endColorstr="#069bd9",GradientType=1);
+    }
+
+    .beltarune-h1 {
+        font-size: 50px;
+    }
+}
